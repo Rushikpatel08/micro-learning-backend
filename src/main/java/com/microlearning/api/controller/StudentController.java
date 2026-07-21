@@ -3,6 +3,7 @@ package com.microlearning.api.controller;
 import com.microlearning.api.model.Student;
 import com.microlearning.api.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,13 +27,14 @@ public class StudentController {
         return studentService.DisplaybyCollege(college);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/Addstudent")
     public Student AddStudent(@RequestBody Student student)
     {
         return studentService.InsertStudent(student);
     }
 
-
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/DeleteStudent/{student_id}")
     public void DeleteStudent(@PathVariable Long student_id)
     {
