@@ -2,6 +2,8 @@ package com.microlearning.api.controller;
 
 import com.microlearning.api.model.Student;
 import com.microlearning.api.service.StudentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/student")
 @RestController
+@Tag(name = "Student Controller", description = "APIs for managing student")
 public class StudentController {
 
     @Autowired
@@ -42,6 +45,10 @@ public class StudentController {
         System.out.println("Deleted Successfully");
     }
 
+    @Operation(
+            summary = "Update Student profile",
+            description = "Update student profile information"
+    )
     @PutMapping("/updateStudent/{Student_id}")
     public Student UpdateMobile(@RequestBody Student newStudent,@PathVariable Long student_id)
     {
