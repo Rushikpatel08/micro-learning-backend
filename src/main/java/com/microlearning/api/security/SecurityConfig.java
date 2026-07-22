@@ -40,7 +40,10 @@ public class SecurityConfig {
                             "/v3/api-docs/**",
                             "/swagger-ui.html",
                             "/metadata/**",
-                            "/monitor/**"
+                            "/monitor/**",
+                            "/api-docs.html",
+                            "/monitoring/**",
+                            "/monitoring-ui/**"
                     ).permitAll()
                     .anyRequest().authenticated()
             );
