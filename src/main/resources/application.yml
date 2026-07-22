@@ -23,8 +23,7 @@ spring:
 
 server:
   port: 3000
-  servlet:
-    context-path: /api/v1
+
 
 jwt:
   secret: 9f3c8b6a1d4e7f2c9a8b6d4e1f7c3a9b8d6f1e2c4a7b9d5e8f3c1a6b9d2e7f5
