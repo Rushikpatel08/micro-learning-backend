@@ -46,9 +46,10 @@ public class SecurityConfig {
                             "/api-docs.html",
                             "/monitoring/**",
                             "/monitoring-ui/**",
-                            "/monitoring-ui/**",
                             "/monitoring/images/**",
-                            "/api/v1/monitoring/images/**"
+                            "/monitoring/export/**",
+                            "/auth/**",
+                            "/student/**"
                     ).permitAll()
                     .anyRequest().authenticated()
             );
