@@ -49,7 +49,8 @@ public class SecurityConfig {
                             "/monitoring/images/**",
                             "/monitoring/export/**",
                             "/auth/**",
-                            "/student/**"
+                            "/student/**",
+                            "/monitoring/databases/**"
                     ).permitAll()
                     .anyRequest().authenticated()
             );
