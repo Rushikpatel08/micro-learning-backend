@@ -50,6 +50,9 @@ public class SecurityConfig {
                             "/monitoring/export/**",
                             "/auth/**",
                             "/student/**",
+                            "/monitoring/database/**",
+                            "/favicon.ico",
+                            "/error",
                             "/monitoring/databases/**"
                     ).permitAll()
                     .anyRequest().authenticated()
