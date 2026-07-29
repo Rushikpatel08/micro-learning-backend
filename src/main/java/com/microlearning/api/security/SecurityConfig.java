@@ -53,7 +53,11 @@ public class SecurityConfig {
                             "/monitoring/database/**",
                             "/favicon.ico",
                             "/error",
-                            "/monitoring/databases/**"
+                            "/monitoring/databases/**",
+                            "/monitoring/health/**",
+                            "monitoring/metrics/**",
+                            "monitoring/applications/**",
+                            "/monitoring/application/**"
                     ).permitAll()
                     .anyRequest().authenticated()
             );
